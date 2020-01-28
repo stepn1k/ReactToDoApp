@@ -1,0 +1,28 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header-title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.app-header-title i {
+  margin-left: 0.5rem;
+  position: relative;
+  top: 4px;
+}
+
+.app-header .done,
+.app-header .todo {
+  color: orange;
+}
+
+.app-header .done {
+  margin-left: 0.3rem;
+}

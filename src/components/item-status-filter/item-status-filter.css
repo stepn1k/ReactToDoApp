@@ -1,0 +1,9 @@
+.item-status-filter button {
+  min-width: 70px;
+  margin: 3px;
+  border: none;
+}
+
+.item-status-filter {
+  margin-left: 0.3rem;
+}

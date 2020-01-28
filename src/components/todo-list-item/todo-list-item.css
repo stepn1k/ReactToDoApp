@@ -1,0 +1,25 @@
+.btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list-item span {
+  font-style: italic;
+  text-transform: capitalize;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}

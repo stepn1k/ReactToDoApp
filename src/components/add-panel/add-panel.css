@@ -1,0 +1,16 @@
+.add-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+}
+
+.add-panel input {
+  flex-grow: 1;
+  padding-left: 0.5rem;
+}
+
+.add-panel button {
+  min-width: 70px;
+}
