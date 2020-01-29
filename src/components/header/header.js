@@ -9,10 +9,10 @@ const Header = () => {
           ToDo React App<i className="fa fa-edit"></i>
         </span>
       </h1>
-      <p className="app-header-subtitle">
+      <h5 className="app-header-subtitle">
         <span className="todo">1</span> more to do,
         <span className="done">3</span> done
-      </p>
+      </h5>
     </div>
   );
 };

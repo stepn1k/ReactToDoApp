@@ -15,11 +15,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 
 .todo-list-item span {
   font-style: italic;
+  font-weight: bold;
   text-transform: capitalize;
   margin-left: 1rem;
   font-size: 1.2rem;
+  user-select: none;
+}
+
+.todo-list-item span:hover {
+  cursor: pointer;
+}
+
+.todo-list-item .done {
+  text-decoration: line-through;
+}
+
+.todo-list-item .important {
+  color: #5bc0de;
 }

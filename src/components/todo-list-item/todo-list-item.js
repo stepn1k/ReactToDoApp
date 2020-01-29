@@ -1,24 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import "./todo-list-item.css";
 
-const ListItem = ({ label, important = false }) => {
-  const listStyle = {
-    color: important ? "#5BC0DE" : "white"
-  };
+export default class ListItem extends Component {
+  constructor() {
+    super();
 
-  return (
-    <span className="todo-list-item">
-      <span style={listStyle}>{label}</span>
-      <div>
-        <button className="btn btn-outline-danger">
-          <i className="fa fa-times"></i>
-        </button>
-        <button className="btn btn-outline-info">
-          <i className="fa fa-exclamation"></i>
-        </button>
-      </div>
-    </span>
-  );
-};
+    this.state = {
+      done: false,
+      important: false
+    };
 
-export default ListItem;
+    this.onLabelClick = () => {
+      this.setState(({ done }) => {
+        return { done: !done };
+      });
+    };
+
+    this.onMarkImportant = () => {
+      this.setState(({ important }) => {
+        return { important: !important };
+      });
+    };
+  }
+
+  render() {
+    const { label, onDeleted } = this.props;
+    const { done, important } = this.state;
+    let classNames = "";
+    if (done) classNames += "done";
+    if (important) classNames += " important";
+
+    return (
+      <span className="todo-list-item">
+        <span onClick={this.onLabelClick} className={classNames}>
+          {label}
+        </span>
+        <div>
+          <button className="btn btn-outline-danger" onClick={onDeleted}>
+            <i className="fa fa-times"></i>
+          </button>
+          <button
+            className="btn btn-outline-info"
+            onClick={this.onMarkImportant}
+          >
+            <i className="fa fa-exclamation"></i>
+          </button>
+        </div>
+      </span>
+    );
+  }
+}

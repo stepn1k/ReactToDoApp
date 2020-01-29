@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   margin: 10px;
+  font-weight: bold;
 }
 
 .app-header-title i {
@@ -25,4 +26,8 @@
 
 .app-header .done {
   margin-left: 0.3rem;
+}
+
+.app-header-subtitle {
+  margin-bottom: 1rem;
 }

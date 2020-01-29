@@ -1,11 +1,16 @@
 import React from "react";
 import "./add-panel.css";
 
-const AddPanel = () => {
+const AddPanel = props => {
   return (
     <div className="add-panel">
       <input></input>
-      <button className="btn-success m-1">Add</button>
+      <button
+        className="btn-success m-1"
+        onClick={() => props.addItem("hello world")}
+      >
+        Add
+      </button>
     </div>
   );
 };
