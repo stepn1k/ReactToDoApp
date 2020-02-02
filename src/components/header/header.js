@@ -1,7 +1,8 @@
 import React from "react";
 import "./header.css";
 
-const Header = () => {
+const Header = props => {
+  let { todo, done } = props;
   return (
     <div className="app-header">
       <h1 className="app-header-title">
@@ -10,8 +11,8 @@ const Header = () => {
         </span>
       </h1>
       <h5 className="app-header-subtitle">
-        <span className="todo">1</span> more to do,
-        <span className="done">3</span> done
+        <span className="todo">{todo}</span> more to do,
+        <span className="done">{done}</span> done
       </h5>
     </div>
   );
